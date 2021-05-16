@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace PermissionParts
 {
-    public enum Permissions : short
+    public enum Permissions : ushort
     {
         NotSet = 0, //error condition
 
@@ -67,6 +67,6 @@ namespace PermissionParts
         Feature2Access = 1001,
 
         [Display(GroupName = "SuperAdmin", Name = "AccessAll", Description = "This allows the user to access every feature")]
-        AccessAll = Int16.MaxValue, 
+        AccessAll = ushort.MaxValue,
     }
 }

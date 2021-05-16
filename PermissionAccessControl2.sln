@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.329
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PermissionAccessControl2", "PermissionAccessControl2\PermissionAccessControl2.csproj", "{9FC0371B-45D7-43AB-9271-B040B116A874}"
 EndProject
@@ -25,11 +25,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataKeyParts", "DataKeyParts\DataKeyParts.csproj", "{B76F79A2-A02E-4879-B2D4-6DC20483250F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizeSetup", "AuthorizeSetup\AuthorizeSetup.csproj", "{F6DB2919-2EFF-4940-AA61-A2BD9F57F781}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizeSetup", "AuthorizeSetup\AuthorizeSetup.csproj", "{F6DB2919-2EFF-4940-AA61-A2BD9F57F781}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserImpersonation", "UserImpersonation\UserImpersonation.csproj", "{3FAB19AB-77BC-4548-ADE5-70B11C9B5094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserImpersonation", "UserImpersonation\UserImpersonation.csproj", "{3FAB19AB-77BC-4548-ADE5-70B11C9B5094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RefreshClaimsParts", "RefreshClaimsParts\RefreshClaimsParts.csproj", "{C9C56B44-3574-4014-831C-8735C200BF56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefreshClaimsParts", "RefreshClaimsParts\RefreshClaimsParts.csproj", "{C9C56B44-3574-4014-831C-8735C200BF56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestPro", "TestPro", "{D93847BF-F1EF-48E7-80FA-0E419DB216E1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{A4DAEE46-92F8-4FAD-9A6C-C28DBC27AC2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,9 +85,17 @@ Global
 		{C9C56B44-3574-4014-831C-8735C200BF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C56B44-3574-4014-831C-8735C200BF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9C56B44-3574-4014-831C-8735C200BF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4DAEE46-92F8-4FAD-9A6C-C28DBC27AC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4DAEE46-92F8-4FAD-9A6C-C28DBC27AC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4DAEE46-92F8-4FAD-9A6C-C28DBC27AC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4DAEE46-92F8-4FAD-9A6C-C28DBC27AC2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA35E935-8CAC-4249-BE78-34FFD009BE70} = {D93847BF-F1EF-48E7-80FA-0E419DB216E1}
+		{A4DAEE46-92F8-4FAD-9A6C-C28DBC27AC2D} = {D93847BF-F1EF-48E7-80FA-0E419DB216E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {018B539D-77A5-4D59-9D8B-1765BD8D2E63}

@@ -12,16 +12,18 @@ namespace PermissionParts
     {
         public static string PackPermissionsIntoString(this IEnumerable<Permissions> permissions)
         {
-            return permissions.Aggregate("", (s, permission) => s + (char)permission);
+            return permissions.Aggregate("", (s, permission) => s + (char)((ushort)permission / 256) + (char)((ushort)permission % 256));
         }
 
         public static IEnumerable<Permissions> UnpackPermissionsFromString(this string packedPermissions)
         {
             if (packedPermissions == null)
                 throw new ArgumentNullException(nameof(packedPermissions));
-            foreach (var character in packedPermissions)
+            if (packedPermissions == string.Empty) yield return Permissions.NotSet;
+            var perArray = packedPermissions.ToCharArray();
+            for (int i = 0; i < perArray.Length / 2; i++)
             {
-                yield return ((Permissions) character);
+                yield return ((Permissions)((ushort)perArray[i * 2] * 256 + perArray[i * 2 + 1]));
             }
         }
 

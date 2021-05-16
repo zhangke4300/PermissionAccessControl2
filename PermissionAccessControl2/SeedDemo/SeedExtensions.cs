@@ -80,7 +80,7 @@ namespace PermissionAccessControl2.SeedDemo
                 var colonIndex = line.IndexOf(':');
                 var roleName = line.Substring(0, colonIndex);
                 var permissions = line.Substring(colonIndex + 1).Split(',')
-                    .Select(x => Enum.Parse(typeof(Permissions), x.Trim(), true))
+                    .Select(x => Enum.TryParse(typeof(Permissions), x.Trim(), true, out object r) ? r : Permissions.NotSet)
                     .Cast<Permissions>().ToList();
                 extraService.AddUpdateRoleToPermissions(roleName, roleName, permissions);
             }

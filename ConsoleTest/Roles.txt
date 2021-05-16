@@ -1,0 +1,6 @@
+﻿Director: EmployeeRead,Tess
+AreaManager: StockRead, SalesRead
+SalesAssistant: StockRead, SalesSell
+StoreManager: StockRead, StockAddNew, StockRemove, SalesRead, SalesSell, SalesReturn
+UserAdmin: UserRead, UserChange, RoleRead
+CacheRole: Cache1, Cache2

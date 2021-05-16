@@ -64,10 +64,10 @@ namespace PermissionParts
                 //Gets the optional PaidForModule that a permission can be linked to
                 var moduleAttribute = member[0].GetCustomAttribute<LinkedToModuleAttribute>();
 
-                var permission = (Permissions)Enum.Parse(enumType, permissionName, false);
-
+                if (!Enum.TryParse(typeof(Permissions), permissionName.Trim(), true, out object permission))
+                    continue;
                 result.Add(new PermissionDisplay(displayAttribute.GroupName, displayAttribute.Name, 
-                        displayAttribute.Description, permission, moduleAttribute?.PaidForModule.ToString()));
+                        displayAttribute.Description, (Permissions)permission, moduleAttribute?.PaidForModule.ToString()));
             }
 
             return result;
