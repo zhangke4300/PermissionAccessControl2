@@ -8,6 +8,7 @@ using DataKeyParts;
 using DataLayer.EfCode.Configurations;
 using DataLayer.ExtraAuthClasses;
 using DataLayer.MultiTenantClasses;
+using System.Linq;
 
 namespace DataLayer.EfCode
 {
@@ -39,6 +40,20 @@ namespace DataLayer.EfCode
             this.MarkWithDataKeyIfNeeded(DataKey);
             return await base.SaveChangesAsync(acceptAllChangesOnSuccess, cancellationToken);
         }
+
+        //private void MarkWithDataKeyIfNeeded(string accessKey)
+        //{
+        //    //at startup access key can be null. The demo setup sets the DataKey directly.
+        //    if (accessKey == null)
+        //        return;
+
+        //    foreach (var entityEntry in this.ChangeTracker.Entries()
+        //        .Where(e => e.State == EntityState.Added))
+        //    {
+        //        if (entityEntry.Entity is IShopLevelDataKey hasDataKey)
+        //            hasDataKey.SetShopLevelDataKey(accessKey);
+        //    }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
